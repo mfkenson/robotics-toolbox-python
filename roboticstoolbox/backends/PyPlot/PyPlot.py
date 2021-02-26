@@ -313,7 +313,9 @@ class PyPlot(Connector):
         plt.ioff()
 
         try:
-            plt.show()
+            # plt.show()
+            while True:
+                self.step()
         except AttributeError:
             pass
 
@@ -422,7 +424,7 @@ class PyPlot(Connector):
             text_trans(text)
 
             # Step the environment
-            self.step(0)
+            # self.step(0)
 
         fig.subplots_adjust(left=0.25)
         text = []
